@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #C7F7F7;
+    padding: 20px;
+    box-sizing: border-box;
+    font-family: 'Inter Black', black;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold; 
+   
+
+}
+
+
+
+.sidebar div   {
+    margin-bottom: 110px; /* Ajusta el margen inferior del <div> */
+}
+
+.sidebar a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #ffffff; /* Cambia el color del texto del enlace */
+    text-align: center; /* Centra el texto horizontalmente */
+    
+}
+
+.sidebar a:hover {
+    color: #D9D9D9; /* Cambia el color del texto del enlace al pasar el mouse por encima */
+}
+
+.logos-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los logotipos */
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 200px; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Ajusta la altura del contenedor al 100% del viewport */
+}
+
+.content h1 {
+    text-align: center;
+    color: #666666;
+    font-size: 27px; /* Tamaño del texto aumentado */
+    font-family: 'Pacifico', cursive; /* Cambia el tipo de letra */
+}
+
+.content p {
+    text-align: center;
+    color: #666666;
+}
+

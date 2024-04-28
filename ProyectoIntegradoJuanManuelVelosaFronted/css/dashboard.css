@@ -1,0 +1,61 @@
+body {
+    font-family: 'Inter Black', black;
+    font-size: 24px; /* Tamaño de letra de 24px para el título */
+    font-weight: bold; /* Hace que todo el texto del body sea más grueso */
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    
+    
+}
+.container {
+    width: 80%;
+    font-family: 'Inter Black', black;
+}
+
+.header {
+    font-family: 'Inter Black', black;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.header h1 {
+    font-family: 'Inter Black', black;
+    margin: 20px;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 8px 8px 0 0;
+    color: rgb(0, 0, 0); /* Cambia el color del texto a azul */
+}
+
+
+
+.user-info {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#searchInput {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.user-actions {
+    display: flex; /* Establece el contenedor como un contenedor flex para alinear los elementos en una fila */
+    flex-direction: row; /* Establece la dirección de los elementos flex como fila */
+}

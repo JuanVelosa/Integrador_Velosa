@@ -1,0 +1,72 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #C7F7F7;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+
+
+.logos-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente los logotipos */
+    width: 300px; /* Ajusta el ancho según sea necesario */
+    height: 200px; /* Ajusta la altura según sea necesario */
+    overflow: hidden;
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease; /* Animación suave */
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido */
+    height: 100vh; /* Ajusta la altura del contenedor al 100% del viewport */
+}
+
+.content h1 {
+    text-align: center;
+    color: #666666;
+    font-size: 27px; /* Tamaño del texto aumentado */
+    font-family: 'Pacifico', cursive; /* Cambia el tipo de letra */
+}
+
+.content p {
+    text-align: center;
+    color: #666666;
+}
+
+.button-login {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 60px; /* Ancho del botón ajustado */
+    background-color: #cccccc;
+    color: #ffffff;
+    font-size: 25px; /* Tamaño del texto aumentado */
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button-login:hover {
+    background-color: #999999;
+}
