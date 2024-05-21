@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Usuarios</title>
+    <link rel="stylesheet" href="css/editarUsuario.css">
+    <script defer src="js/editarUsuario.js"></script>
+</head>
+<body>
+    <div class="form-group Id">
+        <label for="email">Id:</label>
+        <input id="documentId" name="documentId" placeholder="1005897254" >
+    </div>
+    <button  id = "searchButton" button="searchButton" >Buscar</button>
+    <div class="container">
+        <h1 class="title">Editar Usuarios</h1>
+        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"><br>
+    
+        <form class="login-form" action="#"><br>
+            <div class="form-group">
+                <label for="email">Nombre:</label>
+                <input id="name" name="name" placeholder="Juan Daniel" >
+            </div>
+            <div class="form-group">
+                <label for="email">Apellido:</label>
+                <input id="lastname" name="lastname" placeholder="cardona" >
+            </div>
+            <div class="form-group">
+                <label for="email">Id:</label>
+                <input id="newDocument" name="newDocument" placeholder="1005897254" >
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Barona@gmail.com" >
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" placeholder="*******" >
+            </div>
+            <div class="form-group">
+                <label for="password">Confirmación de Contraseña:</label>
+                <input type="password" id="passwordConfirmation" name="ConfirmacionDePassword" placeholder="*******" >
+            </div>
+            
+            <button  id = "editarButton" button="Editar" >Editar</button>
+            <a href="home.html" ><button id = "cancelarButton" button="Cancelar">Cancelar </button></a>
+            
+        </form>
+        
+    </div>
+    
+</body>
+</html>

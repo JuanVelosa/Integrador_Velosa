@@ -88,5 +88,5 @@ cancelButton.addEventListener('click', function(event) {
     });
 
     // Redirigir a otra página
-    window.location.href = "/HomePageAdmi/Index.html";
+    window.location.href = "/home.html";
 });
