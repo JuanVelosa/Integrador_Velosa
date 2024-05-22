@@ -1,6 +1,5 @@
 package com.example.integradorvelosabackend.controller;
 
-import com.example.integradorvelosabackend.Entity.Doctor;
 import com.example.integradorvelosabackend.Repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;

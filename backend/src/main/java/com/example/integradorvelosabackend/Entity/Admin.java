@@ -2,7 +2,7 @@ package com.example.integradorvelosabackend.Entity;
 import jakarta.persistence.*;
 @Entity
 
-public class Admi {
+public class Admin {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -14,7 +14,7 @@ public class Admi {
     private String email;
     private String name;
 
-    public Admi(long id, String username, String password, String email, String name) {
+    public Admin(long id, String username, String password, String email, String name) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -22,7 +22,7 @@ public class Admi {
         this.name = name;
     }
 
-    public Admi() {
+    public Admin() {
     }
 
     public long getId() {

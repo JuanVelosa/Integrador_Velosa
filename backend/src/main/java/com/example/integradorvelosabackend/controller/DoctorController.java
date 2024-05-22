@@ -1,7 +1,7 @@
 package com.example.integradorvelosabackend.controller;
 
 import com.example.integradorvelosabackend.Entity.Doctor;
-import com.example.integradorvelosabackend.Entity.Test;
+import com.example.integradorvelosabackend.Entity.PhysicalTest;
 import com.example.integradorvelosabackend.Repository.DoctorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -105,7 +105,7 @@ public class DoctorController {
     }
 
     @PostMapping("sensor")
-    public ResponseEntity<?> sendData(@RequestBody Test test){
+    public ResponseEntity<?> sendData(@RequestBody PhysicalTest test){
         var output = ResponseEntity.status(200).body(test);
         return output;
     }

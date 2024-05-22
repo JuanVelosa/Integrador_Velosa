@@ -12,9 +12,8 @@ public class Annotation {
     private String note;
 
     @ManyToOne
-    @JoinColumn(name = "id register")
+    @JoinColumn(name = "register")
     private Register register;
-
 
     public Annotation(long id, String note) {
         this.id = id;
