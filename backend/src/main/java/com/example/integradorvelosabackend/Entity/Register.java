@@ -21,8 +21,7 @@ public class Register {
     @OneToMany(mappedBy = "register")
     private List<Annotation> annotation;
 
-    @OneToMany(mappedBy = "register")
-    private List<PhysicalTest> tests;
+
 
     public Register(long id, String author, String testDate) {
         this.id = id;

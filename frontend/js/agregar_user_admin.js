@@ -14,15 +14,15 @@ registerButton.addEventListener('click', registrarUsuario);
 
 
 
-async function postDoctor(doctor){
+async function postDoctor(doctor) {
     //Obj a JSON
     let json = JSON.stringify(doctor);
     console.log(json);
 
-    let response = await fetch(url + 'user/create',{
+    let response = await fetch(url + 'user/create', {
         method: 'POST',
         headers: {
-            'Content-Type':'application/json'
+            'Content-Type': 'application/json'
         },
         body: json
     });
@@ -51,7 +51,7 @@ function registrarUsuario(event) {
         // Validar que las contraseñas coincidan
         if (contraseña === confirmacionContraseña) {
 
-            
+
             let doctor = {
                 name: nombre,
                 lastname: apellido,
@@ -75,7 +75,7 @@ function registrarUsuario(event) {
 }
 
 
-cancelButton.addEventListener('click', function(event) {
+cancelButton.addEventListener('click', function (event) {
     // Prevenir el comportamiento predeterminado del botón (por ejemplo, enviar un formulario)
     event.preventDefault();
 
@@ -88,5 +88,5 @@ cancelButton.addEventListener('click', function(event) {
     });
 
     // Redirigir a otra página
-    window.location.href = "/home.html";
+    window.location.href = 'home.html';
 });
