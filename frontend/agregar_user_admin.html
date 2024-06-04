@@ -5,9 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrar usuario</title>
     <link rel="stylesheet" href="css/agregar_user_admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script defer src="js/agregar_user_admin.js"></script>
 </head>
 <body>
+    <button id="menuToggle">
+        <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
+    </button>
     <div class="container">
         <h1 class="title">Registrar-Usuarios</h1>
         <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
@@ -15,7 +19,7 @@
         <form class="login-form" action="#">
             <div class="form-group">
                 <div class="logo-container">
-                    <img src="/assets/logo.png" alt="Logo" class="logo">
+                    <img src="/frontend/assets/logo.png" alt="Logo" class="logo">
                 </div>
                 <label for="email">Nombre:</label>
                 <input type="email" id="name" name="name" placeholder="Juan Daniel" >

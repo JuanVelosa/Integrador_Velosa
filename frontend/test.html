@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <link rel="stylesheet" href="/frontend/css/test.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Prueba</h1>
+        <div class="grid-container">
+            <!-- Sección 1: Información del Paciente -->
+            <div class="section section-1">
+                <h2>Información del Paciente</h2>
+                <div id="info-paciente">
+                    <span><strong>Nombre:</strong> </span><br>
+                    <span><strong>Cédula:</strong> </span><br>
+                    <span><strong>Id:</strong> </span><br>
+                    <span><strong>Email:</strong> </span><br>
+                </div>
+            </div>
+            
+
+            <!-- Sección 2: Datos de la Prueba -->
+            <div class="section section-2">
+                <h2>Datos de la Prueba</h2>
+                <div>
+                    <span><strong>Nombre del doctor a cargo:</strong> Juan Daniel...</span><br>
+                    <span><strong>Fecha de anotación:</strong> 10/10/2023</span><br>
+                    <span><strong>Duración de prueba:</strong> 00:00</span><br>
+                    <button disabled>Empezar</button><br>
+                </div>
+            </div>
+
+            <!-- Sección 3: Gráfica de Medición -->
+            <div class="section section-3">
+                <h2>Gráfica de Medición</h2>
+                <div class="chartContainter">
+                    <canvas id="signalChart">
+                </div>
+                <div class="description">
+                    <label for="descripcion">Anotaciones de la prueba </label>
+                    <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea>
+                </div>
+                <div class="buttons">
+                    <button disabled>Subir Test</button>
+                    <button disabled>Eliminar Test</button>
+                    <button disabled>Repetir Test</button>
+                </div>
+            </div>
+
+            <!-- Sección 4: Agregar Nuevo Paciente -->
+            <div class="section section-4">
+                <h2>Agregar Nuevo Paciente</h2>
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre">
+                </div>
+                <div class="form-group">
+                    <label for="cedula">Cédula:</label>
+                    <input type="text" id="cedula" name="cedula">
+                </div>
+                <div class="form-buttons">
+                    <button type="button" id="guardar-btn">Guardar</button>
+                    <button type="button">Cancelar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/frontend/js/test.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</body>
+</html>

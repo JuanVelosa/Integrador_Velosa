@@ -92,9 +92,6 @@ body {
 }
 
 #menuToggle {
-    position: absolute;
-    top: 10px;
-    left: 10px;
     display: flex;
     background: none;
     border: none;
@@ -151,7 +148,7 @@ body {
     display: flex;
     padding-left: 5%;
     background-color: #BCCBD8;
-    width: 71%; /* Ancho del contenedor */
+    width: 80%; /* Ancho del contenedor */
     border: 2px solid #000; /* Grosor del borde, tipo de borde y color */
 }
   

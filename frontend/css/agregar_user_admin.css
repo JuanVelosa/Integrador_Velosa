@@ -103,6 +103,46 @@ button:hover {
     white-space: nowrap; /* Evita que el texto del label haga saltos de línea */
 }
 
+#menuToggle {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 50px; /* Ajusta el tamaño del ícono de la hamburguesa */
+    color: #817E94; /* Cambia el color del ícono del toggle menu */
+    margin-right: 100px; /* Ajusta el margen derecho según sea necesario */
+}
+
+#menuToggle:focus {
+    outline: none;
+}
+
+#menu {
+    display: none;
+}
+
+#menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#menu ul li {
+    margin-bottom: 100px;
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: #817E94;
+    font-size: 18px;
+}
+
+/* Muestra el menú cuando el botón de hamburguesa se hace clic */
+#menuToggle:checked + #menu {
+    display: block;
+}
 
 
 

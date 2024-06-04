@@ -14,14 +14,14 @@ public class Patient {
 
     private String name;
     private String documentId;
-    private Date consultationDate;
 
 
-    public Patient(long id, String name, String documentId, Date consultationDate) {
+
+    public Patient(long id, String name, String documentId) {
         this.id = id;
         this.name = name;
         this.documentId = documentId;
-        this.consultationDate = consultationDate;
+
     }
 
     public Patient() {
@@ -51,13 +51,7 @@ public class Patient {
         this.documentId = documentId;
     }
 
-    public Date getConsultationDate() {
-        return consultationDate;
-    }
 
-    public void setConsultationDate(Date consultationDate) {
-        this.consultationDate = consultationDate;
-    }
     @ManyToOne
     @JoinColumn(name = "doctorId")
     private Doctor doctor;
