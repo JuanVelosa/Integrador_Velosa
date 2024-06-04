@@ -1,14 +1,7 @@
 package com.example.integradorvelosabackend.Entity;
 
-import com.example.integradorvelosabackend.Entity.Register;
 import jakarta.persistence.*;
 
-/**
- *La clase SampleAcelerometer implementa la logica
- * que sea necesaria para manipular todo lo correspondiente
- * a las pruebas
- *
- */
 
 @Entity
 public class Test{

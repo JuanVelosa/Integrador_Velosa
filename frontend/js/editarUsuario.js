@@ -1,3 +1,4 @@
+const API = "http://localhost:8080" + "/doctors";
 const nameInput = document.getElementById('name');
 const lastnameInput = document.getElementById('lastname');
 const documentIdInput = document.getElementById('documentId');
@@ -9,7 +10,7 @@ const editarButton = document.getElementById('editarButton');
 
 
 async function editarUsuario(documentId, datosUsuario) {
-    const url = `http://localhost:8080/user/edit/${documentId}`;
+    const url = API + `/${documentId}`;
 
     try {
         const response = await fetch(url, {
@@ -69,15 +70,11 @@ editarButton.addEventListener('click', function(event) {
     editarUsuario(documentId, datosUsuario);
     alert("Usuario editado");
 
-    
-
-    
-
 });
 
 
 async function buscarUsuario(userId) {
-    const url = `http://localhost:8080/user/search/${userId}`;
+    const url = API + `/${userId}`;
 
     try {
         const response = await fetch(url);
@@ -111,6 +108,3 @@ searchButton.addEventListener('click', function(event) {
     // Llamar a la función para buscar el usuario
     buscarUsuario(userId);
 });
-
-
-

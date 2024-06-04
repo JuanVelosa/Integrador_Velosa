@@ -17,7 +17,7 @@ public interface DoctorRepository extends CrudRepository<Doctor, Long> {
     public Optional<Doctor> findByDocumentId(@Param("document") String document);
 
     @Query("SELECT u FROM Doctor u WHERE u.email = :email")
-    public Optional<Doctor> searchByEmail(@Param("email") String email);
+    public Optional<Doctor> findByEmail(@Param("email") String email);
 
     @Query("SELECT u FROM Doctor u WHERE LOWER(u.name) = LOWER(:name) OR LOWER(u.lastname) = LOWER(:name) OR LOWER(CONCAT(u.name, ' ', u.lastname)) = LOWER(:name)")
     public List<Doctor> findByName(@Param("name") String name);

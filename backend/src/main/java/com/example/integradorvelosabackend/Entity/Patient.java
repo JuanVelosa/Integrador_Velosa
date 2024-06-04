@@ -1,8 +1,9 @@
 package com.example.integradorvelosabackend.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
-import java.util.Date;
+import java.time.LocalDate;
 import java.util.List;
 
 @Entity
@@ -14,17 +15,37 @@ public class Patient {
 
     private String name;
     private String documentId;
+    private LocalDate consultationDate;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "doctorID")
+    @JsonIgnore // Evita la serialización infinita
+    private Doctor doctor;
+    @JsonIgnore
+    @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Register> registerList;
+
+    // Constructor, getters y setters
 
 
-
-    public Patient(long id, String name, String documentId) {
+    public Patient(long id, String name, String documentId, LocalDate consultationDate, Doctor doctor, List<Register> registerList) {
         this.id = id;
         this.name = name;
         this.documentId = documentId;
-
+        this.consultationDate = consultationDate;
+        this.doctor = doctor;
+        this.registerList = registerList;
     }
 
     public Patient() {
+    }
+
+    public LocalDate getConsultationDate() {
+        return consultationDate;
+    }
+
+    public void setConsultationDate(LocalDate consultationDate) {
+        this.consultationDate = consultationDate;
     }
 
     public long getId() {
@@ -52,12 +73,8 @@ public class Patient {
     }
 
 
-    @ManyToOne
-    @JoinColumn(name = "doctorId")
-    private Doctor doctor;
 
-    @OneToMany(mappedBy = "patient")
-    private List<Register>listRegister;
+
 
     public Doctor getDoctor() {
         return doctor;
@@ -67,11 +84,11 @@ public class Patient {
         this.doctor = doctor;
     }
 
-    public List<Register> getListRegister() {
-        return listRegister;
+    public List<Register> getRegisterList() {
+        return registerList;
     }
 
-    public void setListRegister(List<Register> listRegister) {
-        this.listRegister = listRegister;
+    public void setRegisterList(List<Register> registerList) {
+        this.registerList = registerList;
     }
 }

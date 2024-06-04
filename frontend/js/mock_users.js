@@ -53,7 +53,7 @@ window.addEventListener("load", () => {
 
         let json = JSON.stringify(user);
 
-        await fetch('http://localhost:8080/user/create', {
+        await fetch('http://localhost:8080/doctors', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

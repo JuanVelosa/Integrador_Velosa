@@ -1,4 +1,4 @@
-const API = "http://localhost:8080" + "/doctors";
+const API = "http://localhost:8080/patients";
 const editarImg = document.querySelector('.user-actions img:first-of-type');
 const eliminarImg = document.querySelector('.user-actions img:last-of-type');
 const container = document.getElementById('users');
@@ -13,11 +13,11 @@ searchButton.addEventListener('click', async () => {
         await getPatient(query);
     } else {
         console.log('El campo de búsqueda está vacío');
-        await getUsers();
+        await getPatients();
     }
 });
 
-async function getUsers() {
+async function getPatients() {
 
     let response = await fetch(API); // HTTP Request
     let users = await response.json();
@@ -131,7 +131,7 @@ async function deleteUserById(id) {
     let msg = "";
 
     try {
-        res = await fetch(API + "/" + id, {
+        res = await fetch(API + `/${id}`, {
             method: 'DELETE'
         });
     } catch (error) {

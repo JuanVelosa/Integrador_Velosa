@@ -20,7 +20,6 @@
                     <span><strong>Email:</strong> </span><br>
                 </div>
             </div>
-            
 
             <!-- Sección 2: Datos de la Prueba -->
             <div class="section section-2">
@@ -36,11 +35,15 @@
             <!-- Sección 3: Gráfica de Medición -->
             <div class="section section-3">
                 <h2>Gráfica de Medición</h2>
-                <div class="chartContainter">
-                    <canvas id="signalChart">
+                <div class="chartContainer">
+                    <label for="testDropdown">Selecciona un test:</label>
+                    <select id="testDropdown">
+                        <option value="">Selecciona un test</option>
+                    </select>
+                    <canvas id="signalChart"></canvas>
                 </div>
                 <div class="description">
-                    <label for="descripcion">Anotaciones de la prueba </label>
+                    <label for="descripcion">Anotaciones de la prueba</label>
                     <textarea id="descripcion" name="descripcion" rows="4" cols="50"></textarea>
                 </div>
                 <div class="buttons">
@@ -69,7 +72,7 @@
         </div>
     </div>
 
-    <script src="/frontend/js/test.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/frontend/js/test.js"></script>
 </body>
 </html>
