@@ -28,7 +28,7 @@ async function postDoctor(doctor) {
     });
 
     console.log(response);
-    location.href = "index.html";
+    
 
 }
 
