@@ -1,4 +1,4 @@
-const API = "http://localhost:8080" + "/doctors";
+const API = "http://localhost:8080/doctors";
 const editarImg = document.querySelector('.user-actions img:first-of-type');
 const eliminarImg = document.querySelector('.user-actions img:last-of-type');
 const container = document.getElementById('users');

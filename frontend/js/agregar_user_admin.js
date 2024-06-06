@@ -1,3 +1,4 @@
+const API = "http://localhost:8080/"
 const nameInput = document.getElementById('name');
 const lastnameInput = document.getElementById('lastname');
 const documentIdInput = document.getElementById('documentId');
@@ -8,7 +9,6 @@ const registerButton = document.getElementById('registerbutton');
 const cancelButton = document.getElementById('cancelarButton');
 
 
-const url = "http://localhost:8080/"
 
 registerButton.addEventListener('click', registrarUsuario);
 
@@ -19,7 +19,7 @@ async function postDoctor(doctor) {
     let json = JSON.stringify(doctor);
     console.log(json);
 
-    let response = await fetch(url + 'user/create', {
+    let response = await fetch(API + 'doctors', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

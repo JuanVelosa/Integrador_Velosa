@@ -1,4 +1,4 @@
-const API = "http://localhost:8080" + "/doctors";
+const API = "http://localhost:8080/doctors";
 const nameInput = document.getElementById('name');
 const lastnameInput = document.getElementById('lastname');
 const documentIdInput = document.getElementById('documentId');
