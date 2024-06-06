@@ -13,27 +13,23 @@ import java.util.Optional;
 @Transactional
 public interface PatientRepository extends CrudRepository<Patient, Long> {
 
-    Patient findById(long patientId);
+    public Optional<Patient> findById(long patientId);
 
     @Query("SELECT u FROM Patient u WHERE u.name LIKE %:name%")
-    List<Patient> findByName(@Param("name") String name);
-
-    @Query("SELECT u FROM Patient u WHERE u.email = :email")
-    Optional<Patient> findByEmail(@Param("email") String email);
+    public List<Patient> findByName(@Param("name") String name);
 
     @Query("SELECT u FROM Patient u WHERE u.documentId = :documentId")
     public Optional<Patient> findByDocumentId(@Param("documentId") String documentId);
 
-
     @Query("SELECT p FROM Patient p WHERE p.doctor.id = :doctorId")
-    List<Patient> findByDoctorId(@Param("doctorId") long doctorId);
+    public List<Patient> findByDoctorId(@Param("doctorId") long doctorId);
 
 
     @Query("SELECT u FROM Patient u WHERE CAST(u.documentId AS string) LIKE CONCAT(:documentId, '%')")
-    List<Patient> findByDocumentIdStartingWith(@Param("documentId") String documentId);
+    public List<Patient> findByDocumentIdStartingWith(@Param("documentId") String documentId);
 
 
     @Query("SELECT u FROM Patient u WHERE u.name LIKE CONCAT(:search, '%') OR u.documentId LIKE CONCAT(:search, '%')  ")
-    List<Patient> findUnassignedPatientBySearch(String search);
+    public List<Patient> findUnassignedPatientBySearch(String search);
 
 }

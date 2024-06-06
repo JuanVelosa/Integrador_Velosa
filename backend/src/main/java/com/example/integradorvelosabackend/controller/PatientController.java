@@ -22,6 +22,7 @@ public class PatientController {
         this.repo = repo;
     }
 
+    // TODO: fix undesired behavior when searching a non-existing user
     @GetMapping
     public ResponseEntity<?> getPatients(@RequestParam(required = false) String name,
             @RequestParam(required = false) String email, @RequestParam(required = false) String documentId) {
@@ -31,9 +32,6 @@ public class PatientController {
 
         else if (name != null)
             return ResponseEntity.status(200).body(repo.findByName(name));
-
-        else if (email != null)
-            return ResponseEntity.status(200).body(repo.findByEmail(email));
 
         else if (documentId != null)
             return ResponseEntity.status(200).body(repo.findByDocumentId(documentId));
