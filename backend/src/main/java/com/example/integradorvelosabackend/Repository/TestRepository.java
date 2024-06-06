@@ -12,9 +12,9 @@ import java.util.List;
 @Repository
 public interface TestRepository extends CrudRepository<Test, Long> {
 
-    List<Test> findByRegisterId(Long registerId);
+    public List<Test> findByRegisterId(Long registerId);
 
     @Query("SELECT u FROM Test u WHERE u.register IS NULL")
-    List<Test> findByRegisterIdIsNull();
+    public List<Test> findByRegisterIdIsNull();
 
 }

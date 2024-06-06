@@ -18,6 +18,6 @@ public interface RegisterRepository  extends CrudRepository<Register, Long> {
     public Optional<Register> searchByPatient(@Param("documentId") long documentId);
 
     @Query("SELECT u FROM Register u WHERE u.author = :name")
-    List<Register> searchByNameList(@Param("name")String name);
+    public List<Register> searchByNameList(@Param("name")String name);
 
 }
