@@ -25,6 +25,7 @@ public class DoctorController {
         return ResponseEntity.status(200).body("Usuario almacenado exitosamente");
     }
 
+    // TODO: fix undesired behavior when searching a non-existing user
     @GetMapping
     public ResponseEntity<?> getDoctors(@RequestParam(required = false) String name,
             @RequestParam(required = false) String email, @RequestParam(required = false) String documentId) {
