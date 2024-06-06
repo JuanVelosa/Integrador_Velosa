@@ -28,7 +28,7 @@ public class AnnotationController {
     }
 
     @DeleteMapping("/{annotationId}") // "8080/annotations/1"
-    public ResponseEntity<?> deleteAnnotation(@PathVariable int annotationId) {
+    public ResponseEntity<?> deleteAnnotation(@PathVariable long annotationId) {
         Optional<Annotation> optionalAnnotation = repo.findById(annotationId);
         if (optionalAnnotation.isPresent()) {
             repo.delete(optionalAnnotation.get());
@@ -38,7 +38,7 @@ public class AnnotationController {
     }
 
     @PatchMapping("/{annotationId}")
-    public ResponseEntity<?> updateAnnotation(@RequestBody String annotation, @PathVariable int annotationId) {
+    public ResponseEntity<?> updateAnnotation(@RequestBody String annotation, @PathVariable long annotationId) {
         Optional<Annotation> box = repo.findById(annotationId);
         Annotation updatedAnnotation = null;
         if (box.isPresent())
