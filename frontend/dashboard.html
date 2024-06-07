@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,36 +9,50 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script defer src="js/dashboard.js"></script>
 </head>
+
 <body>
     <button id="menuToggle">
-        <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
+        <i class="fas fa-bars"></i>
     </button>
     <div class="container">
-        <div class="header">
-            <h1 class = "tittlePage"> Usuarios</h1><br>
+        <header class="header">
+            <h1 class="titlePage">Usuarios</h1>
             <div class="search">
                 <input type="text" id="searchInput" placeholder="Buscar doctor por nombre, cedula o Email">
-                <button id="searchButton" >Buscar</button>
-            </div> <br>
-            <div class="tittles">
-                <h2>Doctor</h2>
-                <h2 class="cedulaTittle">Cedula</h2>
-                <h2 class = "emailTittle">Email</h2>
+                <button id="searchButton">Buscar</button>
             </div>
-            <nav id="menu">
+            <div class="titles">
+                <h2>Doctor</h2>
+                <h2 class="cedulaTitle">Cedula</h2>
+                <h2 class="emailTitle">Email</h2>
+            </div>
+            <nav id="menu" class="menu">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Perfil</a></li>
-                    <li><a href="#">Configuración</a></li>
-                    <!-- Agrega más elementos de menú según sea necesario -->
+                    <li><a href="/home.html">home</a></li>
+                    <li><a href="/agregar_user_admin.html">Agregar usuarios</a></li>
+                    <li><a href="/dashboard.html">lista de usuarios</a></li>
+                    <li><a href="editarUsuario.html">Editar Usuarios</a></li>
+                    <li><a href="typeOfUser.html">Log Out</a></li>
                 </ul>
             </nav>
-            
-        </div>
-        <div class="dashboard">
+        </header>
+        <main class="dashboard">
             <div id="users">
+                <!-- Aquí se mostrarán los usuarios -->
+            </div>
+        </main>
+    </div>
+
+    <!-- Modal de confirmación -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <p id="confirmMessage"></p>
+            <div class="modal-buttons">
+                <button id="confirmYes">Sí</button>
+                <button id="confirmNo">No</button>
             </div>
         </div>
     </div>
 </body>
+
 </html>

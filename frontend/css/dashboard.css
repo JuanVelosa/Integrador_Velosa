@@ -1,107 +1,90 @@
 body {
-    font-family: 'Inter Black', black;
-    font-size: 24px; /* Tamaño de letra de 24px para el título */
-    font-weight: bold; /* Hace que todo el texto del body sea más grueso */
+    font-family: 'Inter Black', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
     margin: 0;
     padding: 0;
     background-color: #fff;
     display: flex;
     justify-content: center;
-  
     min-height: 90vh;
     width: 100%;
-    
-    
 }
+
 .container {
     width: 90%;
-    font-family: 'Inter Black', black;
 }
 
 .header {
-    font-family: 'Inter Black', black;
     color: #fff;
     padding: 20px;
     text-align: center;
     border-radius: 8px;
-    
 }
 
 .header h1 {
-    font-family: 'Inter Black', black;
-    margin: 20px;
-    width: 100%;
+    margin: 20px 0;
     padding: 20px 0;
     border-radius: 8px 8px 0 0;
-    color: rgb(0, 0, 0); /* Cambia el color del texto a azul */
+    color: rgb(0, 0, 0);
 }
 
-
-
-.user-info {
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 70%;
+.search {
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-left: 20px; /* Ajusta el margen derecho según sea necesario */
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
 }
 
-#searchInput{
+#searchInput {
     color: #000;
     background-color: #BCCBD8;
-    width: 20%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    width: 30%;
     box-sizing: border-box;
-   width: 30%;
-
 }
 
-#searchInput:hover {
-    border-color: #817E94; /* Cambia el color del borde cuando se hace hover */
-}
-
+#searchInput:hover,
 #searchInput:focus {
-    border-color: #817E94; /* Cambia el color del borde cuando se hace clic */
-    outline: none; /* Elimina el contorno predeterminado */
+    border-color: #817E94;
+    outline: none;
 }
-.search{
-    display: flex;
-    width: 100%;
-    margin-right: 100x; /* Ajusta el margen derecho según sea necesario */
-    align-items: center; /* Alinea verticalmente los elementos */
 
-}
 #searchButton {
-    margin-left: 10px; /* Ajusta el margen izquierdo del botón */
-    height: 25px; /* Ajusta la altura del botón según sea necesario */
+    margin-left: 10px;
+    padding: 10px 20px;
+    background-color: #817E94;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
 }
 
+.titles {
+    display: flex;
+    justify-content: space-around;
+    background-color: #BCCBD8;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 8px;
+}
 
-
-
-.user-actions {
-    display: flex; /* Establece el contenedor como un contenedor flex para alinear los elementos en una fila */
-    flex-direction: row; /* Establece la dirección de los elementos flex como fila */
-     vertical-align: middle;
+.titles h2 {
+    color: black;
+    margin: 0 10px;
 }
 
 #menuToggle {
     position: absolute;
     top: 10px;
     left: 10px;
-    display: flex;
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 50px; /* Ajusta el tamaño del ícono de la hamburguesa */
-    color: #817E94; /* Cambia el color del ícono del toggle menu */
-    margin-right: 100px; /* Ajusta el margen derecho según sea necesario */
+    font-size: 50px;
+    color: #817E94;
 }
 
 #menuToggle:focus {
@@ -110,6 +93,13 @@ body {
 
 #menu {
     display: none;
+    position: absolute;
+    top: 50px;
+    left: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
 }
 
 #menu ul {
@@ -127,56 +117,128 @@ body {
     font-size: 18px;
 }
 
-/* Muestra el menú cuando el botón de hamburguesa se hace clic */
-#menuToggle:checked + #menu {
-    display: block;
+#menu ul li a:hover {
+    color: #000;
 }
 
+.dashboard {
+    padding: 20px;
+}
 
 .user-info {
-    display: flex; /* Establece el contenedor como un flex container */
-    flex-direction: row; /* Organiza los elementos en una fila */
-    justify-content: space-between; /* Distribuye los elementos horizontalmente */
-    align-items: center; /* Centra verticalmente los elementos */
-    border: 2px solid #000; /* Grosor del borde, tipo de borde y color */
-}
-
-
-.user-info,h4 {
-    font-size: 17px; /* Establece el tamaño de letra del título */
-    /* Otros estilos que desees aplicar al título */
-}
-
-.tittles {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 20px;
     display: flex;
-    padding-left: 5%;
-    background-color: #BCCBD8;
-    width: 71%; /* Ancho del contenedor */
-    border: 2px solid #000; /* Grosor del borde, tipo de borde y color */
-}
-  
-h2 {
-    margin-right: 80px; /* Espacio entre los elementos h2 */
-    color: black;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
 }
 
-h2.emailTittle{
-   padding-left: 20px;
-
-}
-h2.cedulaTittle{
-    padding-left: 0px;
-    width: 80px;
-
+.user-detail {
+    flex: 1;
+    text-align: center;
+    padding: 5px;
 }
 
-h1.tittlePage{
-    padding-left: 100px;
-    width: 55%;
+.user-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.user-actions,button {
-    width: 100px; /* Establece el ancho deseado */
-    height: 30px; /* Opcional: ajusta la altura */
-    font-size: 14px; /* Opcional: ajusta el tamaño del texto */
+.user-actions button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #817E94;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Estilos para el modal de confirmación */
+.modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    /* Fijo */
+    z-index: 1;
+    /* Sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    /* Habilita el scroll si es necesario */
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Fondo negro con opacidad */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    /* Centrado vertical y horizontal */
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 80%;
+    /* Ancho */
+    max-width: 400px;
+    /* Máximo ancho */
+    text-align: center;
+    /* Centrado de texto */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.modal p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+.modal button {
+    margin: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#confirmYes {
+    background-color: #28a745;
+    /* Verde */
+    color: white;
+}
+
+#confirmNo {
+    background-color: #dc3545;
+    /* Rojo */
+    color: white;
+}
+
+#confirmYes:hover {
+    background-color: #218838;
+}
+
+#confirmNo:hover {
+    background-color: #c82333;
 }

@@ -1,59 +1,69 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Editar Usuarios</title><br>
+    <title>Editar Usuarios</title>
     <link rel="stylesheet" href="css/editarUsuario.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <script defer src="js/editarUsuario.js"></script>
-</head><br>
+</head>
+
 <body>
     <button id="menuToggle">
         <i class="fas fa-bars"></i> <!-- Ícono de hamburguesa -->
     </button>
+
+    <nav id="menu" class="menu">
+        <ul>
+            <li><a href="/home.html">home</a></li>
+            <li><a href="/agregar_user_admin.html">Agregar usuarios</a></li>
+            <li><a href="/dashboard.html">lista de usuarios</a></li>
+            <li><a href="editarUsuario.html">Editar Usuarios</a></li>
+            <li><a href="typeOfUser.html">Log Out</a></li>
+        </ul>
+    </nav>
+
     <div class="form-group Id">
         <label for="email">Id:</label>
-        <input id="documentId" name="documentId" placeholder="1005897254" >
-        <button  id = "searchButton" button="searchButton" >Buscar</button>
+        <input id="documentId" name="documentId" placeholder="1005897254">
+        <button id="searchButton">Buscar</button>
     </div>
-    
+
     <div class="container">
-        <h1 class="title">Editar Usuarios</h1><br>
-        <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet"><br>
-    
-        <form class="login-form" action="#"><br>
+        <h1 class="title">Editar Usuarios</h1>
+        <form class="login-form" action="#">
             <div class="form-group">
-                <label for="email">Nombre:</label>
-                <input id="name" name="name" placeholder="Juan Daniel" >
+                <label for="name">Nombre:</label>
+                <input id="name" name="name" placeholder="Juan Daniel">
             </div>
             <div class="form-group">
-                <label for="email">Apellido:</label>
-                <input id="lastname" name="lastname" placeholder="cardona" >
+                <label for="lastname">Apellido:</label>
+                <input id="lastname" name="lastname" placeholder="Cardona">
             </div>
             <div class="form-group">
-                <label for="email">Id:</label>
-                <input id="newDocument" name="newDocument" placeholder="1005897254" >
+                <label for="newDocument">Id:</label>
+                <input id="newDocument" name="newDocument" placeholder="1005897254">
             </div>
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" placeholder="Barona@gmail.com" >
+                <input type="email" id="email" name="email" placeholder="Barona@gmail.com">
             </div>
             <div class="form-group">
                 <label for="password">Contraseña:</label>
-                <input type="password" id="password" name="password" placeholder="*******" >
+                <input type="password" id="password" name="password" placeholder="*******">
             </div>
             <div class="form-group">
-                <label for="password">Confirmación de Contraseña:</label>
-                <input type="password" id="passwordConfirmation" name="ConfirmacionDePassword" placeholder="*******" >
+                <label for="passwordConfirmation">Confirmación de Contraseña:</label>
+                <input type="password" id="passwordConfirmation" name="ConfirmacionDePassword" placeholder="*******">
             </div>
-            
-            <button  id = "editarButton" button="Editar" >Editar</button>
-            <a href="home.html" ><button id = "cancelarButton" button="Cancelar">Cancelar </button></a>
-            
+            <div class="user-actions">
+                <button id="editarButton">Editar</button>
+                <a href="/home.html" class="cancel-button">Cancelar</a>
+            </div>
         </form>
-        
     </div>
-    
 </body>
+
 </html>

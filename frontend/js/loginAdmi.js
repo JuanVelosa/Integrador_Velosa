@@ -10,7 +10,7 @@ signInButton.addEventListener('click', async () => {
 });
 
 async function signIn(email, password) {
-    const URL = "http://localhost:8080/signin";
+    const URL = "http://localhost:8080/signinAdmin";
 
     const body = JSON.stringify(
         {
@@ -38,7 +38,7 @@ async function signIn(email, password) {
 
         else if (res.status == 200) {
             msg = "Inicio de sesión exitoso";
-            window.location.href = 'homeDoctor.html';
+            window.location.href = 'home.html';
         }
 
 

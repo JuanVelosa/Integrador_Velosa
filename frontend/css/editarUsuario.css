@@ -1,138 +1,102 @@
+/* General */
 body {
-    font-family: 'Inter Black', black;
-    font-size: 24px; /* Tamaño de letra de 24px para el título */
-    font-weight: bold; /* Hace que todo el texto del body sea más grueso */
+    font-family: 'Inter Black', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
     margin: 0;
     padding: 0;
     background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
-    
-    
+    min-height: 100vh;
 }
 
+/* Contenedor Principal */
 .container {
     text-align: center;
     padding: 20px;
     border-radius: 8px;
-    width: 300px;
-    margin-top: 20px;
-    
-}
-
-.title {
-    position: absolute; /* Cambia la posición a absolute */
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    margin-top: 20px;
-    width: 100%;
-    padding: 20px 0;
-    border-radius: 8px 8px 0 0;
-    
-
-}
-
-
-.login-form {
-    margin-top: 50px;
+    width: 350px;
     background-color: #A5B4C2;
-    width: 300px;
-    border-radius: 40px; /* Ajusta el valor según la cantidad de redondez que desees */
-    padding: 20px; /* Opcional: Añade un espacio alrededor del formulario */
+    border-radius: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.title {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+/* Formulario */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .form-group {
     margin-bottom: 20px;
+    width: 100%;
 }
 
 .form-group label {
     display: block;
     margin-bottom: 5px;
-    font-weight: bold; /* Hace que todo el texto del body sea más grueso */
-    font-size: 18px; /* Tamaño de letra de 24px para el título */
+    font-weight: bold;
+    font-size: 18px;
+    text-align: left;
 }
 
-.form-group input,
-button {
-    width: calc(100% - 40px); /* El ancho es el 100% menos el padding izquierdo y derecho */
+.form-group input {
+    width: calc(100% - 20px);
     padding: 10px;
-    border-radius: 5px;
     border: 1px solid #ccc;
-    background-color: #BCCBD8; /* Cambia el color de fondo dentro del input */
-    font-weight: bold; /* Hace que todo el texto del body sea más grueso */
-    border-radius: 0px; /* Redondeo de 10px para los inputs y botones */
-    
-    
+    background-color: #BCCBD8;
+    font-weight: bold;
+    border-radius: 5px;
+    box-sizing: border-box;
 }
 
+/* Botones */
 button {
     background-color: #6CE4DD;
     color: #fff;
     border: none;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    font-size: 16px; /* Tamaño de letra de 16px para el texto del botón */
-    width: 281px; /* Ancho de 250px para el botón */
-    border-radius: 0px; /* Redondeo de 10px para los inputs y botones */
-    margin-bottom: 13px; /* Ajusta el margen inferior entre los botones */
+    font-size: 18px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 13px;
+    border-radius: 5px;
 }
 
 button:hover {
     background-color: #36D2C9;
 }
 
-.form-group label {
-    display: inline-block; /* Cambia a inline-block */
-    width: 100px; /* Ancho fijo para los labels */
-    text-align: left; /* Alinea el texto del label a la izquierda */
-    margin-right: 180px; /* Espacio entre el label y el input */
-    font-weight: bold;
-}
-
-.logo-container {
-    
-    margin-top: 40px; /* Separación del contenedor del logo desde arriba */
-    
-}
-
-.logo {
-    max-width: 100px; /* Ancho máximo del logo */
-    
-}
-
-.form-group label {
-    white-space: nowrap; /* Evita que el texto del label haga saltos de línea */
-}
-
-.form-group.Id {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 80px;
-    
-}
-
-.form-group.Id label {
-    margin-bottom: 8px;
-}
-
-.form-group.Id input,
-.form-group.Id button {
-    width: 100%;
-    max-width: 300px; /* Puedes ajustar este valor según tus necesidades */
-    margin-bottom: 8px;
+.cancel-button {
+    background-color: #6CE4DD;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 13px;
+    border-radius: 5px;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
-.user-actions {
-    display: flex; /* Establece el contenedor como un contenedor flex para alinear los elementos en una fila */
-    flex-direction: row; /* Establece la dirección de los elementos flex como fila */
-     vertical-align: middle;
+.cancel-button:hover {
+    background-color: #36D2C9;
 }
 
+/* Menú de Hamburguesa */
 #menuToggle {
     position: absolute;
     top: 10px;
@@ -141,9 +105,8 @@ button:hover {
     background: none;
     border: none;
     cursor: pointer;
-    font-size: 50px; /* Ajusta el tamaño del ícono de la hamburguesa */
-    color: #817E94; /* Cambia el color del ícono del toggle menu */
-    margin-right: 100px; /* Ajusta el margen derecho según sea necesario */
+    font-size: 50px;
+    color: #817E94;
 }
 
 #menuToggle:focus {
@@ -152,15 +115,23 @@ button:hover {
 
 #menu {
     display: none;
+    position: absolute;
+    top: 60px;
+    left: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #menu ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 #menu ul li {
-    margin-bottom: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
 }
 
 #menu ul li a {
@@ -169,10 +140,30 @@ button:hover {
     font-size: 18px;
 }
 
-/* Muestra el menú cuando el botón de hamburguesa se hace clic */
-#menuToggle:checked + #menu {
-    display: block;
+/* Form Group Id */
+.form-group.Id {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 20%;
+    margin-bottom: 20px;
 }
 
+.form-group.Id label {
+    margin-bottom: 8px;
+}
 
+.form-group.Id input,
+.form-group.Id button {
+    width: calc(100% - 20px);
+    margin-bottom: 8px;
+    box-sizing: border-box;
+}
 
+/* User Actions */
+.user-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}

@@ -1,72 +1,78 @@
+/* General */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
+    display: flex;
 }
 
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
     left: 0;
-    width: 200px;
+    width: 250px;
     height: 100%;
     background-color: #C7F7F7;
     padding: 20px;
     box-sizing: border-box;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
-
-
-.logos-container {
-    margin-top: 50px;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente los logotipos */
-    width: 300px; /* Ajusta el ancho según sea necesario */
-    height: 200px; /* Ajusta la altura según sea necesario */
-    overflow: hidden;
-}
-
-.logo {
-    width: 100%;
-    height: auto;
-    transition: transform 0.3s ease; /* Animación suave */
-}
-
+/* Content */
 .content {
+    margin-left: 250px;
     display: flex;
-    flex-direction: column; /* Cambia la dirección del flexbox a columna */
-    justify-content: center; /* Centra horizontalmente el contenido */
-    align-items: center; /* Centra verticalmente el contenido */
-    height: 100vh; /* Ajusta la altura del contenedor al 100% del viewport */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
 }
 
 .content h1 {
     text-align: center;
-    color: #666666;
-    font-size: 27px; /* Tamaño del texto aumentado */
-    font-family: 'Pacifico', cursive; /* Cambia el tipo de letra */
+    color: #333;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    font-family: 'Pacifico', cursive;
 }
 
-.content p {
-    text-align: center;
-    color: #666666;
+.logos-container {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    width: 120%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1);
 }
 
 .button-login {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    padding: 10px 60px; /* Ancho del botón ajustado */
-    background-color: #cccccc;
-    color: #ffffff;
-    font-size: 25px; /* Tamaño del texto aumentado */
+    padding: 10px 20px;
+    background-color: #00ACC1;
+    color: #fff;
+    font-size: 18px;
     border: none;
-    border-radius: 7px;
+    border-radius: 30px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .button-login:hover {
-    background-color: #999999;
+    background-color: #007bff;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
