@@ -1,22 +1,27 @@
 package com.example.integradorvelosabackend.Entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.*;
 
-
 @Entity
-public class Test{
+public class Test {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
     private double time;
+
     private double xPosition;
+
     private double yPosition;
+
     private double zPosition;
 
+    @JsonIgnore
     @ManyToOne
-    @JoinColumn(name="registerID")
+    @JoinColumn(name = "registerID")
     private Register register;
 
     public Test() {
@@ -77,5 +82,5 @@ public class Test{
 
     public void setRegister(Register register) {
         this.register = register;
-}
+    }
 }

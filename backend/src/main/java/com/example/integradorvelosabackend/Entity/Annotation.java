@@ -3,7 +3,6 @@ package com.example.integradorvelosabackend.Entity;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
-
 @Entity
 
 public class Annotation {
@@ -13,9 +12,10 @@ public class Annotation {
     private long id;
 
     private String annotation;
+    
     @JsonIgnore
     @ManyToOne
-    @JoinColumn(name="registerID")
+    @JoinColumn(name = "registerID")
     private Register register;
 
     public Register getRegister() {

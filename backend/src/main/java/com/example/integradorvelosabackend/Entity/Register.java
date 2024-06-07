@@ -16,6 +16,7 @@ public class Register {
     private LocalDate testDate;
 
     private String author;
+
     @JsonIgnore
     @ManyToOne
     @JoinColumn(name = "patientID")
@@ -24,6 +25,7 @@ public class Register {
     @JsonIgnore
     @OneToMany(mappedBy = "register", cascade = CascadeType.ALL)
     private List<Test> tests;
+
     @JsonIgnore
     @OneToMany(mappedBy = "register")
     private List<Annotation> annotations;

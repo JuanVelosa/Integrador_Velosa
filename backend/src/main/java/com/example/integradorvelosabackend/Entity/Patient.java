@@ -14,21 +14,22 @@ public class Patient {
     private long id;
 
     private String name;
+
     private String documentId;
+
     private LocalDate consultationDate;
 
+    @JsonIgnore // Evita la serialización infinita
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "doctorID")
-    @JsonIgnore // Evita la serialización infinita
     private Doctor doctor;
+
     @JsonIgnore
     @OneToMany(mappedBy = "patient", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private List<Register> registerList;
 
-    // Constructor, getters y setters
-
-
-    public Patient(long id, String name, String documentId, LocalDate consultationDate, Doctor doctor, List<Register> registerList) {
+    public Patient(long id, String name, String documentId, LocalDate consultationDate, Doctor doctor,
+            List<Register> registerList) {
         this.id = id;
         this.name = name;
         this.documentId = documentId;
@@ -71,10 +72,6 @@ public class Patient {
     public void setDocumentId(String documentId) {
         this.documentId = documentId;
     }
-
-
-
-
 
     public Doctor getDoctor() {
         return doctor;

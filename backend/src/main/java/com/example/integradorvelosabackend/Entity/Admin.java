@@ -1,5 +1,7 @@
 package com.example.integradorvelosabackend.Entity;
+
 import jakarta.persistence.*;
+
 @Entity
 
 public class Admin {
@@ -8,10 +10,12 @@ public class Admin {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-
     private String username;
+
     private String password;
+
     private String email;
+
     private String name;
 
     public Admin(long id, String username, String password, String email, String name) {

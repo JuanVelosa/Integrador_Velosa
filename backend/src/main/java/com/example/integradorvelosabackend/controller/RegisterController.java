@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.integradorvelosabackend.Entity.Register;
-import com.example.integradorvelosabackend.Entity.RegisterDTO;
 import com.example.integradorvelosabackend.Entity.Test;
 import com.example.integradorvelosabackend.Entity.Annotation;
 import com.example.integradorvelosabackend.Entity.SignalTransformation;
@@ -54,7 +53,6 @@ public class RegisterController {
      * metodo para agregar una prueba relacionada con un paciente
      *
      */
-
     @PostMapping("/{registerId}")
     public ResponseEntity<?> register(@PathVariable Long registerId, @RequestBody List<Test> tests) {
         // Buscar el registro asociado
@@ -87,7 +85,7 @@ public class RegisterController {
         if (!optionalRegister.isPresent())
             return ResponseEntity.status(404).body("Register not found");
 
-        return ResponseEntity.ok(new RegisterDTO(optionalRegister.get()));
+        return ResponseEntity.ok(optionalRegister.get());
     }
 
     /*
@@ -102,7 +100,6 @@ public class RegisterController {
         List<Test> fullTests = testRepo.findByRegisterId(registerId);
         SignalTransformation signalTransformation = fourierTransformation(fullTests);
         return ResponseEntity.ok(signalTransformation);
-
     }
 
     @GetMapping("/{registerId}/annotations")

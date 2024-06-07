@@ -1,7 +1,9 @@
 package com.example.integradorvelosabackend.Entity;
 
 public class SignalTransformation {
+
     private double[] spectrum;
+    
     private double[] freqs;
 
     public SignalTransformation(double[] spectrum, double[] freqs) {
@@ -27,4 +29,5 @@ public class SignalTransformation {
     public void setFreqs(double[] freqs) {
         this.freqs = freqs;
     }
+
 }

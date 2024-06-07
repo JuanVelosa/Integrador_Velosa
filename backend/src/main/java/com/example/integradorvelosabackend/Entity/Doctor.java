@@ -13,7 +13,9 @@ public class Doctor {
     private long id;
 
     private String name;
+    
     private String lastname;
+    
     private String email;
 
     private String documentId;
@@ -22,9 +24,10 @@ public class Doctor {
 
     @JsonIgnore
     @OneToMany(mappedBy = "doctor")
-    private List<Patient>listPatient;
+    private List<Patient> listPatient;
 
-    public Doctor(long id, String name, String lastname, String email, String documentId, String password, List<Patient> listPatient) {
+    public Doctor(long id, String name, String lastname, String email, String documentId, String password,
+            List<Patient> listPatient) {
         this.id = id;
         this.name = name;
         this.lastname = lastname;
@@ -68,8 +71,6 @@ public class Doctor {
     public void setEmail(String email) {
         this.email = email;
     }
-
-
 
     public String getDocumentId() {
         return documentId;
